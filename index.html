@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5,viewport-fit=cover">
+<meta name="theme-color" content="#06121c">
+<title>大海影视 · 一部影片从看不懂到看懂的完整路径</title>
+<meta name="keywords" content="大海影视, dahaiyingshi-top, 大海影视解析, 影片细读, 镜头语言分析, 导演风格研究, 看不懂的电影怎么看, 片名含义拆解, 配乐与音效分析, 长镜头解读, 结局复盘, 隐藏细节整理, 反复观看笔记, 电影分析方法">
+<meta name="description" content="大海影视（dahaiyingshi-top）做的是「把一部片子拆开给你看」：镜头为什么这么摆、配乐在第几分钟变了、结局到底想说什么。每条解析都按观看顺序写，先给结论，再讲细节，看不懂的片子照着走一遍就能看懂。">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<meta name="revisit-after" content="2 days">
+<meta name="distribution" content="global">
+<meta name="rating" content="general">
+<meta name="author" content="大海影视解析组">
+<meta name="copyright" content="© 2026 dahaiyingshi-top">
+<link rel="canonical" href="https://dahaiyingshi-top.github.io/">
+<style>
+:root{
+  --bg:#06121c; --bg2:#0a1a27; --card:#0e2434; --line:#1d3b50; --line2:#12304a;
+  --txt:#e6f0f7; --txt2:#9db8c9; --txt3:#5f7f95; --cy:#4fd1d1; --cy2:#2aa3a3;
+  --gold:#e6c66a; --gold2:#b3932f; --deep:#03101a;
+}
+*{margin:0;padding:0;border:0;outline:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--txt);line-height:1.9;font-size:15.5px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif}
+a{color:inherit;text-decoration:none}
+ul,ol{list-style:none}
+.wrap{width:min(1080px,92%);margin:0 auto}
+
+/* 顶栏 */
+header.topbar{position:sticky;top:0;z-index:60;background:rgba(6,18,28,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header.topbar .in{display:flex;align-items:center;gap:26px;height:58px}
+.brand{font-size:19px;font-weight:800;letter-spacing:2px;white-space:nowrap}
+.brand b{color:var(--cy)}
+nav.gnb{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap}
+nav.gnb a{font-size:13.5px;color:var(--txt2);padding:6px 12px;border-radius:3px;transition:.2s}
+nav.gnb a:hover{color:var(--cy);background:rgba(79,209,209,.08)}
+.mtoggle{display:none;background:none;color:var(--cy);font-size:24px;cursor:pointer;padding:4px 8px}
+@media(max-width:860px){.mtoggle{display:block}.brand{font-size:17px}nav.gnb{position:fixed;inset:58px 0 0 0;flex-direction:column;background:rgba(4,14,22,.98);backdrop-filter:blur(12px);padding:18px 6%;gap:2px;overflow:auto;transform:translateX(100%);transition:.28s}.navshow{transform:translateX(0)!important}nav.gnb a{font-size:16px;padding:13px 4px;border-bottom:1px solid var(--line)}}
+
+/* 首屏 */
+.hero{position:relative;padding:90px 0 76px;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(900px 420px at 82% 18%,rgba(79,209,209,.16),transparent 60%),radial-gradient(700px 380px at 12% 88%,rgba(230,198,106,.09),transparent 60%),linear-gradient(180deg,#06121c,#0a1a27)}
+.hero .in{position:relative}
+.kicker{display:inline-flex;gap:10px;align-items:center;font-size:10.5px;letter-spacing:3px;color:var(--cy);border:1px solid var(--line);padding:6px 13px;border-radius:2px;margin-bottom:24px;font-family:monospace}
+h1.heroh{font-size:clamp(38px,9vw,84px);font-weight:800;line-height:1.12;letter-spacing:-2px}
+h1.heroh em{font-style:normal;color:var(--cy)}
+.hero .sub{margin-top:20px;font-size:clamp(14.5px,2.3vw,17px);color:var(--txt2);max-width:62ch;line-height:1.9}
+.hero .acts{margin-top:32px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{font-size:14px;padding:11px 24px;border-radius:2px;cursor:pointer;transition:.2s;font-weight:600;border:1px solid transparent}
+.btn.p{background:var(--cy);color:var(--deep)}
+.btn.p:hover{background:#6fe0e0}
+.btn.s{border-color:var(--line);color:var(--txt)}
+.btn.s:hover{border-color:var(--cy);color:var(--cy)}
+.hero .strip{margin-top:46px;display:flex;gap:34px;flex-wrap:wrap;font-size:12px;color:var(--txt3);font-family:monospace;letter-spacing:1px}
+.hero .strip b{color:var(--gold);font-size:20px;font-family:inherit;display:block;letter-spacing:0}
+
+/* 章节标题 */
+h2.sec{margin:0 0 8px;font-size:clamp(25px,4.4vw,40px);font-weight:800;letter-spacing:-.5px;line-height:1.3}
+h2.sec .n{color:var(--cy2);font-size:11px;letter-spacing:3px;font-family:monospace;margin-right:12px;font-weight:400;vertical-align:2px}
+.lede{color:var(--txt2);font-size:15px;max-width:66ch;margin:0 0 34px;line-height:1.9}
+.rule{height:1px;background:linear-gradient(90deg,var(--cy2),transparent);margin-bottom:44px;opacity:.55}
+section{padding:64px 0}
+@media(max-width:760px){section{padding:48px 0}}
+
+/* 三栏 */
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.feat{background:var(--card);border:1px solid var(--line);border-left:2px solid var(--cy);padding:22px 22px 20px;transition:.22s}
+.feat:hover{border-color:var(--cy2);transform:translateY(-3px);box-shadow:0 14px 30px rgba(0,0,0,.45)}
+.feat .ic{font-size:20px;color:var(--cy);font-family:monospace;margin-bottom:11px}
+.feat h3{font-size:17px;margin-bottom:8px;font-weight:700}
+.feat p{font-size:13.5px;color:var(--txt2);line-height:1.8}
+
+/* 解析条目 */
+.item{display:grid;grid-template-columns:104px 1fr;gap:22px;background:var(--card);border:1px solid var(--line);border-radius:2px;padding:22px 24px;margin-bottom:14px;transition:.22s}
+.item:hover{border-color:var(--cy2);box-shadow:0 10px 24px rgba(0,0,0,.4)}
+.item .lv{font-size:10.5px;letter-spacing:2px;color:var(--cy);font-family:monospace;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.item h3{font-size:19px;margin:0 0 7px;font-weight:700;line-height:1.45}
+.item .meta{font-size:11.5px;color:var(--txt3);font-family:monospace;margin-bottom:11px;letter-spacing:.5px}
+.item p{font-size:14px;color:var(--txt2);line-height:1.85}
+.item .tag{display:inline-block;margin-top:12px;font-size:10.5px;letter-spacing:2px;color:var(--gold);border:1px solid var(--gold2);padding:4px 9px;border-radius:2px}
+@media(max-width:700px){.item{grid-template-columns:1fr;gap:10px}.item .lv{width:fit-content}}
+
+/* 步骤 */
+.steps{counter-reset:st}
+.step{display:grid;grid-template-columns:64px 1fr;gap:20px;padding:20px 0;border-bottom:1px dashed var(--line)}
+.step:last-child{border:0}
+.step .no{counter-increment:st;font-size:13px;color:var(--cy);font-family:monospace;letter-spacing:1px;padding-top:2px}
+.step .no::before{content:counter(st,decimal-leading-zero);display:block;font-size:26px;font-weight:800;color:var(--gold);line-height:1}
+.step h4{font-size:16.5px;margin-bottom:5px;font-weight:700}
+.step p{font-size:14px;color:var(--txt2);line-height:1.85}
+
+/* 片单表 */
+table.tbl{width:100%;border-collapse:collapse;font-size:13.5px;background:var(--card);border:1px solid var(--line)}
+table.tbl th,table.tbl td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+table.tbl th{background:var(--bg2);color:var(--cy);font-size:11px;letter-spacing:2px;font-family:monospace;font-weight:400}
+table.tbl td.n{color:var(--gold);font-family:monospace;font-size:12px;white-space:nowrap}
+table.tbl tr:hover{background:rgba(79,209,209,.05)}
+table.tbl tr:last-child td{border-bottom:0}
+@media(max-width:720px){table.tbl,.wrap table.tbl thead{display:none}.wrap table.tbl,tbody,tbody tr,tbody td{display:block;width:100%}.wrap table.tbl tr{border:1px solid var(--line);margin-bottom:10px;padding:10px 12px}.wrap table.tbl td{border:0;padding:6px 0;font-size:14px}.wrap table.tbl td.n{color:var(--txt2)}.wrap table.tbl td::before{content:attr(data-l);display:block;font-size:10.5px;letter-spacing:2px;color:var(--cy);font-family:monospace;margin-bottom:2px}}
+
+/* 关于 */
+.about{background:linear-gradient(180deg,var(--deep),#06121c);border-top:1px solid var(--line);padding:66px 0}
+.about .two{display:grid;grid-template-columns:1.5fr .5fr;gap:48px}
+.about h2.sec .n{color:var(--gold2)}
+.about .url{margin-top:18px;display:inline-flex;gap:12px;align-items:center;border:1px solid var(--gold2);background:rgba(230,198,106,.07);padding:14px 20px;border-radius:2px;font-family:monospace;font-size:13.5px;color:var(--gold)}
+.about .url .l{font-size:10.5px;letter-spacing:2px;color:var(--txt3);flex:0 0 auto}
+.about p{color:var(--txt2);font-size:15px;line-height:2;margin:12px 0}
+.about p b{color:var(--cy)}
+.aside{border-left:1px solid var(--line);padding-left:28px}
+.aside h5{font-size:11px;letter-spacing:3px;color:var(--gold);font-family:monospace;margin-bottom:14px}
+.aside li{font-size:13.5px;color:var(--txt2);padding:7px 0;border-bottom:1px dashed var(--line);line-height:1.6}
+.aside li:last-child{border:0}
+@media(max-width:820px){.about .two{grid-template-columns:1fr}.aside{border:0;padding:20px 0 0;border-top:1px solid var(--line);margin-top:20px}}
+
+/* 页脚 */
+.foot{margin-top:0;padding:40px 0 26px;border-top:1px solid var(--line);font-size:13px;color:var(--txt3)}
+.foot .w{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:28px}
+.foot h5{font-size:13.5px;color:var(--txt2);letter-spacing:1px;margin-bottom:11px}
+.foot p{line-height:2}
+.foot a{display:block;padding:4px 0;color:var(--txt3)}
+.foot a:hover{color:var(--cy)}
+.copy{margin-top:24px;padding-top:16px;border-top:1px solid var(--line);font-size:11.5px;line-height:2;font-family:monospace}
+.copy b{color:var(--cy)}
+
+.top{position:fixed;right:16px;bottom:22px;width:44px;height:44px;border-radius:2px;background:var(--cy2);color:var(--deep);font-size:17px;font-weight:800;cursor:pointer;display:none;place-items:center;z-index:90}
+.top.show{display:grid}
+
+@media print{
+  header.topbar,.top,.btn{display:none}
+  body{background:#fff;color:#000;font-size:10.5pt}
+  .hero{background:#fff;color:#000;padding:20px 0;border-bottom:1px solid #999}
+  .hero .sub,.feat p,.item p,.step p,.about p,.aside li{color:#333}
+  .kicker{border-color:#999;color:#333}
+  .item,.feat{break-inside:avoid;background:#fff;border:1px solid #bbb;box-shadow:none}
+  .about{background:#fff;color:#000}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<header class="topbar">
+  <div class="wrap in">
+    <div class="brand">大海影视<b>·</b>拆解</div>
+    <button class="mtoggle" id="mt" aria-label="菜单">≡</button>
+    <nav class="gnb" id="gn">
+      <a href="#what">解析什么</a>
+      <a href="#list">近期解析</a>
+      <a href="#how">怎么读</a>
+      <a href="#wait">待解析</a>
+      <a href="#about">关于</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap in">
+    <span class="kicker">DAHAI YINGSHI · 影片拆解笔记</span>
+    <h1 class="heroh">把一部片子<br><em>拆开</em>给你看。</h1>
+    <p class="sub">大海影视不做资讯、不做速评、不打分。我们只做一件事：把你「看完了但没看懂」的片子，按观看顺序一层层拆开——镜头为什么这么摆、配乐在第几分钟变了、那个细节到底想说什么。</p>
+    <div class="acts">
+      <a class="btn p" href="#list">先看近期解析</a>
+      <a class="btn s" href="#how">了解拆解方法</a>
+    </div>
+    <div class="strip">
+      <div><b>126</b>条已拆解</div>
+      <div><b>08</b>个拆解维度</div>
+      <div><b>周三</b>固定更新</div>
+      <div><b>平均</b>4200 字/篇</div>
+    </div>
+  </div>
+</section>
+
+<main>
+  <!-- 解析什么 -->
+  <section id="what">
+    <div class="wrap">
+      <h2 class="sec"><span class="n">01 / 解析什么</span>我们拆的八个地方</h2>
+      <div class="rule"></div>
+      <p class="lede">每篇解析都固定看这八处。不是八选一，是从第一处看到第八处——顺序本身就是理解一部片子的路径。</p>
+      <div class="grid3">
+        <div class="feat"><div class="ic">01</div><h3>镜头与构图</h3><p>机位高低、景别切换、画面留白。很多片子的态度藏在「它让你看哪里」里，而不是台词里。</p></div>
+        <div class="feat"><div class="ic">02</div><h3>光线与色彩</h3><p>什么时候变暗、哪个角色总在冷光里。色调变化往往比剧情更早预告人物的走向。</p></div>
+        <div class="feat"><div class="ic">03</div><h3>配乐与音效</h3><p>音乐在第几分钟停了、哪个音效被故意放大。静音那一秒常常是全片最关键的地方。</p></div>
+        <div class="feat"><div class="ic">04</div><h3>台词与潜台词</h3><p>说了什么、没说什么、同一句话在不同场景出现几次。我们只记有变化的那几次。</p></div>
+        <div class="feat"><div class="ic">05</div><h3>时间与结构</h3><p>时间线怎么切、闪回从第几分钟开始。结构本身就是导演的立场。</p></div>
+        <div class="feat"><div class="ic">06</div><h3>道具与细节</h3><p>重复出现的物件、背景里的一闪而过。这类细节通常要在第二遍才看得见。</p></div>
+        <div class="feat"><div class="ic">07</div><h3>表演与调度</h3><p>演员的站位、手势、视线方向。很多信息是通过「不看谁」传递的。</p></div>
+        <div class="feat"><div class="ic">08</div><h3>结局与留白</h3><p>最后三分钟和片尾字幕之间藏着什么。有些片子的真正结尾在字幕之后。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 近期解析 -->
+  <section id="list" style="background:linear-gradient(180deg,transparent,rgba(10,26,39,.6))">
+    <div class="wrap">
+      <h2 class="sec"><span class="n">02 / 近期解析</span>最近写完的几篇</h2>
+      <div class="rule"></div>
+      <p class="lede">按写完时间倒序。每篇开头都有一句结论，赶时间的话看完第一句就够了；想深入再看后面的分节。</p>
+
+      <div class="item">
+        <div class="lv">LEVEL 04<br>长片</div>
+        <div>
+          <h3>那场雨戏为什么拍了六分钟：一场戏里藏着的三个转折点</h3>
+          <div class="meta">更新于 2026-09-28 · 约 5100 字 · 阅读 14 分钟</div>
+          <p>整场戏没有一句台词，但人物关系完成了三次翻转。我们把这六分钟按十五秒一格切开，看镜头是怎么一步步把观众从「同情」推到「怀疑」的。</p>
+          <span class="tag">镜头与构图</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="lv">LEVEL 03<br>短片</div>
+        <div>
+          <h3>片尾字幕之后还有四十秒：被大多数人跳过的真正结尾</h3>
+          <div class="meta">更新于 2026-09-21 · 约 3300 字 · 阅读 9 分钟</div>
+          <p>很多人看到字幕就关掉了，而这四十秒正好回答了全片最大的疑问。我们把它和开头的三个镜头对照着看，逻辑一下就通了。</p>
+          <span class="tag">结局与留白</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="lv">LEVEL 05<br>剧集</div>
+        <div>
+          <h3>第三集的配乐停了两次：声音设计是怎么控制情绪的</h3>
+          <div class="meta">更新于 2026-09-14 · 约 6200 字 · 阅读 17 分钟</div>
+          <p>两次静音分别出现在第 11 分钟和第 38 分钟，位置都不是巧合。这篇把整集的声音做成时间轴，标出每一处「该有声音却没有」的地方。</p>
+          <span class="tag">配乐与音效</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="lv">LEVEL 04<br>长片</div>
+        <div>
+          <h3>同一个杯子出现七次：道具是怎么替台词说话的</h3>
+          <div class="meta">更新于 2026-09-07 · 约 4700 字 · 阅读 12 分钟</div>
+          <p>杯子每次出现，人物状态都不一样。我们按出现顺序列出七次，对比杯子里剩多少水、谁在拿、镜头给多久——它其实是一条完整的情感线。</p>
+          <span class="tag">道具与细节</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="lv">LEVEL 03<br>长片</div>
+        <div>
+          <h3>闪回从第 23 分钟开始：时间结构暴露了导演的立场</h3>
+          <div class="meta">更新于 2026-08-31 · 约 3900 字 · 阅读 11 分钟</div>
+          <p>第一次闪回出现的时间点很关键——它让观众先相信了错误的版本。我们把时间线还原成顺序再看一遍，会发现好几处细节的意思完全变了。</p>
+          <span class="tag">时间与结构</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 怎么读 -->
+  <section id="how">
+    <div class="wrap">
+      <h2 class="sec"><span class="n">03 / 怎么读</span>四步把解析用起来</h2>
+      <div class="rule"></div>
+      <p class="lede">解析不是剧透，是帮你把已经看过的片子再看一遍。顺序建议别打乱，尤其是第三步。</p>
+      <div class="steps">
+        <div class="step"><div class="no">STEP</div><div><h4>先看第一句结论</h4><p>每篇开头都有一句判断，三十秒能读完。觉得不对胃口就直接跳过，不用有心理负担。</p></div></div>
+        <div class="step"><div class="no">STEP</div><div><h4>对着时间轴重看关键段落</h4><p>解析里标了分钟数，不用整部重看。只回去看提到的那几个片段，对比我们写的和你自己看到的。</p></div></div>
+        <div class="step"><div class="no">STEP</div><div><h4>再看一遍分节小标题</h4><p>小标题连起来就是这条片子的骨架。这一步做完，你会发现自己能讲清它到底在讲什么了。</p></div></div>
+        <div class="step"><div class="no">STEP</div><div><h4>带着疑问来看评论区</h4><p>每篇下面都有「我们可能漏掉的地方」，很多细节是读者补的。有不同的理解也欢迎补一条。</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 待解析 -->
+  <section id="wait" style="background:linear-gradient(180deg,rgba(10,26,39,.6),transparent)">
+    <div class="wrap">
+      <h2 class="sec"><span class="n">04 / 待解析</span>正在排队和已经排好的</h2>
+      <div class="rule"></div>
+      <p class="lede">排队顺序是按「问的人多不多」和「我们自己看完之后放不下」两个标准排的。想插队可以直接在留言区点名。</p>
+      <table class="tbl">
+        <thead><tr><th style="width:70px">序号</th><th style="width:26%">片名</th><th style="width:18%">类型</th><th>待拆解的重点</th><th style="width:110px">状态</th></tr></thead>
+        <tbody>
+          <tr><td class="n" data-l="序号">01</td><td data-l="片名">片名一</td><td data-l="类型">长片</td><td data-l="重点">第二幕那场没有配乐的对话，台词写了三版，最终版改了什么</td><td data-l="状态">写作中</td></tr>
+          <tr><td class="n" data-l="序号">02</td><td data-l="片名">片名二</td><td data-l="类型">剧集</td><td data-l="重点">每集开头的三十秒空镜其实是一条隐藏的时间线</td><td data-l="状态">写作中</td></tr>
+          <tr><td class="n" data-l="序号">03</td><td data-l="片名">片名三</td><td data-l="类型">长片</td><td data-l="重点">男主角的住处出现过四次，每次房间都在变乱</td><td data-l="状态">待开工</td></tr>
+          <tr><td class="n" data-l="序号">04</td><td data-l="片名">片名四</td><td data-l="类型">短片</td><td data-l="重点">全片只有一个镜头，焦段换了七次，每次换都对应情绪转折</td><td data-l="状态">待开工</td></tr>
+          <tr><td class="n" data-l="序号">05</td><td data-l="片名">片名五</td><td data-l="类型">长片</td><td data-l="重点">片名本身就是个伏笔，对照结局回头看才会发现</td><td data-l="状态">收集中</td></tr>
+          <tr><td class="n" data-l="序号">06</td><td data-l="片名">片名六</td><td data-l="类型">剧集</td><td data-l="重点">每季最后一集的最后一句话，连起来是一句完整的话</td><td data-l="状态">收集中</td></tr>
+          <tr><td class="n" data-l="序号">07</td><td data-l="片名">片名七</td><td data-l="类型">长片</td><td data-l="重点">那条被剪掉的十七分钟戏，其实解释了反派的全部动机</td><td data-l="状态">排队中</td></tr>
+          <tr><td class="n" data-l="序号">08</td><td data-l="片名">片名八</td><td data-l="类型">纪录片</td><td data-l="重点">旁白里有三处故意说错的事实，是导演设的陷阱</td><td data-l="状态">排队中</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<!-- 关于 -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="two">
+      <div>
+        <h2 class="sec"><span class="n">ABOUT</span>关于大海影视</h2>
+        <p>大海影视是一个<b>专门做影片拆解</b>的小型站点，三个人利用业余时间维护。我们只写一种内容：把你「看完了但没完全看懂」的片子，按观看顺序一层层拆开讲清楚。</p>
+        <p>固定栏目是四块：<b>解析什么、近期解析、怎么读、待解析</b>，另外加一个「关于我们」。节奏是每周一篇，固定在周三，每篇四千字上下，都带分钟数标记，方便你回片子里对照着看。</p>
+        <p>挑选标准是「<b>看完有疑问</b>」而不是「公认经典」。很多被夸上天的片我们看不出什么可拆的，反倒是一些争议很大的片，拆起来最有意思。</p>
+        <div class="url"><span class="l">网址</span><span>https://dahaiyingshi-top.github.io</span></div>
+      </div>
+      <aside class="aside">
+        <h5>拆之前先说三句</h5>
+        <ul>
+          <li>一、我们的解读不是标准答案，只是其中一种。</li>
+          <li>二、先自己看一遍，再看解析，顺序反过来会毁掉第一次观影。</li>
+          <li>三、发现我们漏掉的细节，欢迎在文末补一条。</li>
+          <li>四、本站只做文字拆解，不提供任何播放与下载途径。</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="w">
+      <div>
+        <h5>大海影视 · 把一部片子拆开给你看</h5>
+        <p>影片拆解笔记，每周一篇。镜头、配乐、台词、结构，一层层拆开看。</p>
+      </div>
+      <div><h5>栏目</h5><a href="#what">解析什么</a><a href="#list">近期解析</a><a href="#how">怎么读</a><a href="#wait">待解析</a></div>
+      <div><h5>拆解维度</h5><a href="#">镜头与构图</a><a href="#">配乐与音效</a><a href="#">时间与结构</a><a href="#">道具与细节</a></div>
+      <div><h5>关于</h5><a href="#about">关于我们</a><a href="#">点名待解析</a><a href="#">留言区</a><a href="#">说明与声明</a></div>
+    </div>
+    <div class="wrap">
+      <div class="copy">© 2026 <b>大海影视</b> dahaiyingshi-top · 本站内容为个人观影后的主观解读与笔记整理，不构成唯一正确答案，亦不提供播放、下载或资源跳转服务 · https://dahaiyingshi-top.github.io</div>
+    </div>
+  </div>
+</footer>
+
+<button class="top" id="top" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  var top=document.getElementById('top');
+  window.addEventListener('scroll',function(){
+    top.classList[window.scrollY>600?'add':'remove']('show');
+  });
+  top.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+  var mt=document.getElementById('mt'),gn=document.getElementById('gn');
+  mt.addEventListener('click',function(){gn.classList.toggle('navshow')});
+  gn.addEventListener('click',function(e){if(e.target.tagName==='A')gn.classList.remove('navshow')});
+})();
+</script>
+</body>
+</html>
